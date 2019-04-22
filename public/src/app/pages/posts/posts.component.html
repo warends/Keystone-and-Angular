@@ -1,7 +1,4 @@
-<p>
-  posts works!
-</p>
 <div *ngFor="let post of posts">
-  <h3>{{post.title}}</h3>
-  <p [innerHTML]="post.content.extended"></p>
+  <a [routerLink]="['/posts', post._id]">{{post.title}}</a>
+  <p [innerHTML]="post.content.brief"></p>
 </div>

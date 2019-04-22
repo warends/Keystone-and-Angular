@@ -1,0 +1,11 @@
+<div *ngIf="post">
+  <img *ngIf="post.image" [src]="post.image.secure_url" class="img-responsive">
+  <h3>{{post.title}}</h3>
+  <p>Author: {{post.author.name.first}} {{post.author.name.last}}</p>
+
+  <h5>Categories</h5>
+  <ul>
+    <li *ngFor="let cat of post.categories"><a [routerLink]="['/categories/', cat._id]">{{cat.name}}</a></li>
+  </ul>
+  <p [innerHTML]="post.content.extended"></p>
+</div>

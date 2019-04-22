@@ -76,7 +76,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Angualar Home {{ title }}!\n  </h1>\n  <img width=\"300\" class=\"responsive-img\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n\n<a [routerLink]=\"['/']\">Home</a>\n<br>\n<a [routerLink]=\"['/posts']\">Posts</a>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>{{ title }}!</h1>\n  <img width=\"300\" class=\"responsive-img\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n\n<nav style=\"display: flex; margin-bottom: 50px;\">\n  <a [routerLink]=\"['/']\" style=\"margin-right: 10px\">Home</a>\n  <a [routerLink]=\"['/posts']\">Posts</a>\n</nav>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -107,7 +107,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.title = 'angular-keystone';
+        this.title = 'angular & keystone';
     }
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -231,6 +231,84 @@ var HomeComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/pages/posts/post-detail/post-detail.component.html":
+/*!********************************************************************!*\
+  !*** ./src/app/pages/posts/post-detail/post-detail.component.html ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<h3>{{post?.title}}</h3>\n<p [innerHTML]=\"post?.content.extended\"></p>\n"
+
+/***/ }),
+
+/***/ "./src/app/pages/posts/post-detail/post-detail.component.scss":
+/*!********************************************************************!*\
+  !*** ./src/app/pages/posts/post-detail/post-detail.component.scss ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3Bvc3RzL3Bvc3QtZGV0YWlsL3Bvc3QtZGV0YWlsLmNvbXBvbmVudC5zY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/pages/posts/post-detail/post-detail.component.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/pages/posts/post-detail/post-detail.component.ts ***!
+  \******************************************************************/
+/*! exports provided: PostDetailComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostDetailComponent", function() { return PostDetailComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _services_posts_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../services/posts.service */ "./src/app/services/posts.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+
+
+
+
+
+
+var PostDetailComponent = /** @class */ (function () {
+    function PostDetailComponent(route, postService) {
+        this.route = route;
+        this.postService = postService;
+        this.unsubscribeAll = new rxjs__WEBPACK_IMPORTED_MODULE_5__["Subject"]();
+    }
+    PostDetailComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.params
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["filter"])(function (params) { return params.id; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["mergeMap"])(function (params) { return _this.postService.getPostDetail(params.id); }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["takeUntil"])(this.unsubscribeAll))
+            .subscribe(function (data) {
+            _this.post = data.post;
+        });
+    };
+    PostDetailComponent.prototype.ngOnDestroy = function () {
+        this.unsubscribeAll.next();
+        this.unsubscribeAll.complete();
+    };
+    PostDetailComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
+            selector: 'app-post-detail',
+            template: __webpack_require__(/*! ./post-detail.component.html */ "./src/app/pages/posts/post-detail/post-detail.component.html"),
+            styles: [__webpack_require__(/*! ./post-detail.component.scss */ "./src/app/pages/posts/post-detail/post-detail.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _services_posts_service__WEBPACK_IMPORTED_MODULE_1__["PostsService"]])
+    ], PostDetailComponent);
+    return PostDetailComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/pages/posts/posts-routing.module.ts":
 /*!*****************************************************!*\
   !*** ./src/app/pages/posts/posts-routing.module.ts ***!
@@ -242,9 +320,11 @@ var HomeComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostsRoutingModule", function() { return PostsRoutingModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _posts_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./posts.component */ "./src/app/pages/posts/posts.component.ts");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _post_detail_post_detail_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./post-detail/post-detail.component */ "./src/app/pages/posts/post-detail/post-detail.component.ts");
+/* harmony import */ var _posts_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./posts.component */ "./src/app/pages/posts/posts.component.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 
@@ -252,16 +332,20 @@ __webpack_require__.r(__webpack_exports__);
 var routes = [
     {
         path: '',
-        component: _posts_component__WEBPACK_IMPORTED_MODULE_1__["PostsComponent"],
+        component: _posts_component__WEBPACK_IMPORTED_MODULE_2__["PostsComponent"]
+    },
+    {
+        path: ':id',
+        component: _post_detail_post_detail_component__WEBPACK_IMPORTED_MODULE_1__["PostDetailComponent"]
     }
 ];
 var PostsRoutingModule = /** @class */ (function () {
     function PostsRoutingModule() {
     }
     PostsRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forChild(routes)],
-            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"]]
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forChild(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"]]
         })
     ], PostsRoutingModule);
     return PostsRoutingModule;
@@ -278,7 +362,7 @@ var PostsRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  posts works!\n</p>\n"
+module.exports = "<div *ngFor=\"let post of posts\">\n  <a [routerLink]=\"['/posts', post._id]\">{{post.title}}</a>\n  <p [innerHTML]=\"post.content.brief\"></p>\n</div>\n"
 
 /***/ }),
 
@@ -304,34 +388,33 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostsComponent", function() { return PostsComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _services_posts_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../services/posts.service */ "./src/app/services/posts.service.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 
 
 
 
 var PostsComponent = /** @class */ (function () {
-    function PostsComponent(http) {
-        this.http = http;
-        this.API_URL = '/api';
+    function PostsComponent(postService) {
+        this.postService = postService;
     }
     PostsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.http.get(this.API_URL + "/posts")
+        this.postService.getPostList()
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["take"])(1))
             .subscribe(function (data) {
             console.log(data);
-            _this.posts = data;
+            _this.posts = data.posts;
         });
     };
     PostsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Component"])({
             selector: 'app-posts',
             template: __webpack_require__(/*! ./posts.component.html */ "./src/app/pages/posts/posts.component.html"),
             styles: [__webpack_require__(/*! ./posts.component.scss */ "./src/app/pages/posts/posts.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_posts_service__WEBPACK_IMPORTED_MODULE_1__["PostsService"]])
     ], PostsComponent);
     return PostsComponent;
 }());
@@ -356,6 +439,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
 /* harmony import */ var _posts_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./posts.component */ "./src/app/pages/posts/posts.component.ts");
+/* harmony import */ var _post_detail_post_detail_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./post-detail/post-detail.component */ "./src/app/pages/posts/post-detail/post-detail.component.ts");
+
 
 
 
@@ -367,7 +452,7 @@ var PostsModule = /** @class */ (function () {
     }
     PostsModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["NgModule"])({
-            declarations: [_posts_component__WEBPACK_IMPORTED_MODULE_5__["PostsComponent"]],
+            declarations: [_posts_component__WEBPACK_IMPORTED_MODULE_5__["PostsComponent"], _post_detail_post_detail_component__WEBPACK_IMPORTED_MODULE_6__["PostDetailComponent"]],
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_4__["CommonModule"],
                 _posts_routing_module__WEBPACK_IMPORTED_MODULE_2__["PostsRoutingModule"]
@@ -393,17 +478,26 @@ var PostsModule = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostsService", function() { return PostsService; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
 
 
 var PostsService = /** @class */ (function () {
-    function PostsService() {
+    function PostsService(http) {
+        this.http = http;
     }
+    PostsService.prototype.getPostList = function () {
+        return this.http.get("/api/posts");
+    };
+    PostsService.prototype.getPostDetail = function (id) {
+        return this.http.get("/api/posts/" + id);
+    };
     PostsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
             providedIn: 'root'
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
     ], PostsService);
     return PostsService;
 }());
@@ -473,7 +567,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/willarends/Desktop/Projects/keystone_demo/public/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/willarends/Desktop/Projects/keystone-angular/public/src/main.ts */"./src/main.ts");
 
 
 /***/ })
