@@ -36,13 +36,11 @@ var routes = {
 exports = module.exports = function (app) {
 	// Views
 	app.get('/', routes.views.index);
-	// app.get('/blog/:category?', routes.views.blog);
-	// app.get('/blog/post/:post', routes.views.post);
 	app.get('/api/posts', keystone.middleware.api, routes.api.post.list);
 	app.get('/api/posts/:id', keystone.middleware.api, routes.api.post.get);
-	app.get('*', routes.views.index);
+	app.get('/api/gallery', keystone.middleware.api, routes.api.gallery.list);
+	app.get('/api/gallery/:id', keystone.middleware.api, routes.api.gallery.get);
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
-
 };

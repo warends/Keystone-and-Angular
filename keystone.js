@@ -20,7 +20,7 @@ keystone.init({
 	'favicon': 'public/favicon.ico',
 	'views': './server/templates/views',
 	'view engine': '.hbs',
-
+	'mongo': 'mongodb://localhost/angular-keystone',
 	'custom engine': handlebars.create({
 		layoutsDir: './server/templates/views/layouts',
 		partialsDir: './server/templates/views/partials',
@@ -56,6 +56,7 @@ keystone.set('routes', require('./server/routes'));
 keystone.set('nav', {
 	posts: ['posts', 'post-categories'],
 	users: 'users',
+	gallery: 'Gallery'
 });
 
 // Start Keystone to connect to your database and initialise the web server

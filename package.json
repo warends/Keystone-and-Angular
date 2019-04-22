@@ -8,6 +8,7 @@
     "dotenv": "4.0.0",
     "express-handlebars": "3.0.0",
     "handlebars": "^4.1.1",
+    "hoek": "^5.0.3",
     "keystone": "^4.0.0",
     "lodash": "^4.13.1",
     "moment": "^2.24.0",
@@ -17,11 +18,12 @@
   "devDependencies": {
     "eslint": "3.15.0",
     "eslint-config-keystone": "3.0.0",
-    "eslint-plugin-react": "^5.1.1"
+    "eslint-plugin-react": "^5.1.1",
+    "nodemon": "^1.18.11"
   },
   "scripts": {
     "start": "npm run serve-api",
-    "serve-api": "node keystone.js",
+    "serve-api": "nodemon keystone.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
